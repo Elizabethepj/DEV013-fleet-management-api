@@ -10,6 +10,8 @@ db = SQLAlchemy(app)
 swagger = Swagger(app)
 
 # Define the Taxi model
+
+
 class Taxi(db.Model):
     """Model representing a Taxi."""
     __tablename__ = 'taxis'
@@ -17,6 +19,8 @@ class Taxi(db.Model):
     plate = db.Column(db.String(20), nullable=False)
 
 # Route to show all taxis
+
+
 @app.route('/taxis', methods=['GET'])
 def show_taxis():
     """
@@ -71,12 +75,8 @@ def show_taxis():
     # Create list
     taxis_list = [{'id': taxi.id, 'plate': taxi.plate} for taxi in taxis]
 
-    # create diccionario
-    response = {
-        'taxis': taxis_list
-    }
+    return jsonify(taxis_list)
 
-    return jsonify(response)
 
 if __name__ == "__main__":
     app.run(debug=True)
