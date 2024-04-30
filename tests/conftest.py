@@ -1,16 +1,18 @@
-import pytest
-from src.main import app
-import psycopg2
+"""configuration of context"""
 import os
+import pytest
+import psycopg2
+from src.taxis import app
 
 
 @pytest.fixture
 def client():
+    """to create client"""
     app.config['TESTING'] = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
-    with app.test_client() as client:
+    with app.test_client() as client_app:
         with app.app_context():
-            yield client
+            yield client_app
 
 
 @pytest.fixture(scope="module")

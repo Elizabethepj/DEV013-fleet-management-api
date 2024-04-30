@@ -1,3 +1,4 @@
+"""Conection postgres"""
 import os
 import psycopg2
 
@@ -6,6 +7,6 @@ connection = psycopg2.connect(
     user=os.getenv('POSTGRES_USER'),
     password=os.getenv('POSTGRES_PASSWORD'),
     database=os.getenv('POSTGRES_DATABASE'),
-    port=5000
+    port=5432
 )
 print("Successfully connected")
