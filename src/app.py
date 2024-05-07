@@ -3,7 +3,7 @@ import os
 from flask import Flask
 from flasgger import Swagger
 from .models import db
-from .taxis import taxis
+from .taxis import taxis_routes
 from .trajectories import trajectories
 
 
@@ -16,7 +16,7 @@ def create_app():
     db.init_app(app)
 
     # Register blueprints
-    app.register_blueprint(taxis)
+    app.register_blueprint(taxis_routes)
     app.register_blueprint(trajectories)
 
    # Initialize Swagger

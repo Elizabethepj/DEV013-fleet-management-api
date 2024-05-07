@@ -10,8 +10,8 @@ app = create_app()
 def client():
     """create client"""
     # app.register_blueprint(taxis)
-    app.config['TESTING'] = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
+    app.config['TESTING'] = True
     with app.test_client() as client_app:
         with app.app_context():
             yield client_app

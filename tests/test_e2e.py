@@ -1,5 +1,3 @@
-
-
 """test e2e"""
 import requests
 

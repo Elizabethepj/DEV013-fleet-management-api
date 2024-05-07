@@ -4,3 +4,7 @@ __pycache__/
 .pytest_cache/
 docs/
 explaindev.json/
+.vercel/
+.webassets-cache
+ipython_config.py
+.python-version
