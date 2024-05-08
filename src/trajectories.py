@@ -58,7 +58,6 @@ def show_trajectories():
     # print("Taxi ID:", taxi_id)
     date = request.args.get('date')
     # print("fecha", date)
-    date = date.strip()
 
     # if not taxi_id return error
     if not taxi_id:
@@ -68,6 +67,7 @@ def show_trajectories():
     taxi_id = int(taxi_id)
 
     if not date:
+        date = date.strip()
         return jsonify({"error": "You must provide a date"})
 
     if date:
