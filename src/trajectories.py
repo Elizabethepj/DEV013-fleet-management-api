@@ -11,7 +11,7 @@ trajectories = Blueprint('trajectories', __name__)
 def show_trajectories():
     """
     Gets the list of all trajectories.
-
+    
     ---
     parameters:
       - name: page
@@ -43,14 +43,25 @@ def show_trajectories():
               date:
                 type: string
                 format: date-time
-                description: The date and time of the trajectory
+                description: The date of the trajectory
+              time:
+                type: string
+                format: time
+                description: The time of the trajectory              
               latitude:
                 type: float
                 description: The latitude of the trajectory
               longitude:
                 type: float
                 description: The longitude of the trajectory
-
+      404:
+          description: Taxi was not found
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: "The ID or the date does not exist in the database"      
     """
 
     # Get the taxi_id parameter from the request
@@ -90,7 +101,6 @@ def show_trajectories():
                                                     ).limit(limit).offset(offset).all()
 
     # Verify if there are trajectories
-
     if not trajectories_filter:
         return jsonify({"error": "The ID or the date does not exist in the database"}), 404
 
