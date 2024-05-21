@@ -1,14 +1,55 @@
-from flask import Blueprint, jsonify
+"""Last trajectory for each"""
+from flask import Blueprint, jsonify, request
 from sqlalchemy import func
 from .models import db, Trajectories, Taxi
-from sqlalchemy.sql import desc
+
+# from sqlalchemy.sql import desc
 
 last_trajectory = Blueprint('last_trajectory', __name__)
 
 
 @last_trajectory.route('/last_trajectory', methods=['GET'])
 def show_last_trajectory():
-    # Subconsulta para obtener el último registro de cada taxi
+    """
+    Endpoint para obtener todos los taxis.
+
+    ---
+    parameters:
+      - name: query
+        in: query
+        type: string
+        required: false
+        description: Placa del taxi.
+
+
+    responses:
+      200 :
+        description: Un arreglo JSON de todos los taxis.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              taxi_id:
+                type: integer
+                description: El ID del taxi.
+              plate:
+                type: string
+                description: Placa del taxi.
+                example: FHLB-7962
+              date:
+                type: string
+                format: date-time
+                description: The date of the trajectory
+              latitude:
+                type: string
+                example: 116.291
+              longitude:
+                type: string
+                example: 39.88672
+    """
+
+    # subquery to get latest tegister of each taxi
     subquery = db.session.query(
         Trajectories.taxi_id,
         func.max(Trajectories.date).label('latest_date')
@@ -16,7 +57,14 @@ def show_last_trajectory():
         Trajectories.taxi_id
     ).subquery()
 
-    # Consulta principal para obtener la última ubicación de cada taxi
+    # pagination parameters
+    limit = request.args.get("limit", default=10, type=int)
+    page = request.args.get("page", default=1, type=int)
+
+    # Calculate the index of the pagination
+    offset = (page - 1) * limit
+
+    # Main query to get the latest location of each taxi
     last_location = db.session.query(
         subquery.c.taxi_id,
         Trajectories.longitude,
@@ -30,7 +78,8 @@ def show_last_trajectory():
     ).join(
         Taxi,
         Trajectories.taxi_id == Taxi.id
-    ).distinct().all()  # distinct elimina filas duplicadas
+        # distinct remove duplicate rows
+    ).distinct().limit(limit).offset(offset).all()
 
     result = []
 

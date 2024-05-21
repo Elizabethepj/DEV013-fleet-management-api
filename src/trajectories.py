@@ -1,4 +1,4 @@
-
+"""Endopoint trajectories"""
 from datetime import datetime
 from flask import Blueprint, request, jsonify
 from sqlalchemy import func
@@ -11,7 +11,7 @@ trajectories = Blueprint('trajectories', __name__)
 def show_trajectories():
     """
     Gets the list of all trajectories.
-    
+
     ---
     parameters:
       - name: page
@@ -51,9 +51,11 @@ def show_trajectories():
               latitude:
                 type: float
                 description: The latitude of the trajectory
+                example: 116.291
               longitude:
                 type: float
                 description: The longitude of the trajectory
+                example: 39.88672
       404:
           description: Taxi was not found
           schema:
@@ -122,44 +124,3 @@ def show_trajectories():
 
 
 # http://localhost:5000/trajectories?taxi_id=6418&date=2008-02-02&page=10
-# Route trajectories
-
-# @trajectories.route('/trajectories', methods=['GET'])
-# def show_trajectories():
-#     """Show all trajectories filtered by taxi_id"""
-
-#     # Obtener el parámetro taxi_id de la solicitud
-#     taxi_id = request.args.get("taxi_id")
-#     print("Taxi ID:", taxi_id)
-
-#     # Si no se proporciona taxi_id, devolver un mensaje de error
-#     if not taxi_id:
-#         return jsonify({"error": "Debe proporcionar el ID de taxi"}), 400
-
-#     # Convertir el taxi_id a un entero
-#     taxi_id = int(taxi_id)
-
-#     # pagination parameters
-#     limit = request.args.get("limit", default=10, type=int)
-#     page = request.args.get("page", default=1, type=int)
-
-#     # Calcular el índice de inicio para la paginación
-#     offset = (page - 1) * limit
-
-#     # Filtrar las trayectorias por taxi_id con paginación
-#     trajectories_filter = Trajectories.query.filter_by(taxi_id=taxi_id).limit(limit).offset(offset).all()
-
-#     # Convertir los objetos Trajectories a diccionarios
-#     trajectories_dict = []
-#     for trajectory in trajectories_filter:
-#         trajectory_dict = {
-#             "id": trajectory.id,
-#             "taxi_id": trajectory.taxi_id,
-#             "datetime": trajectory.date.strftime('%Y-%m-%d %H:%M:%S'),
-#             "latitude": trajectory.latitude,
-#             "longitude": trajectory.longitude
-#         }
-#         trajectories_dict.append(trajectory_dict)
-
-#     # Retornar las trayectorias filtradas en formato JSON
-#     return jsonify(trajectories_dict)
