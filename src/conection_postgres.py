@@ -1,3 +1,4 @@
+"""Connection postgreSQL"""
 import os
 import psycopg2
 
