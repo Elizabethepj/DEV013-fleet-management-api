@@ -9,165 +9,47 @@
 * [5. Criterios de aceptación del proyecto](#5-criterios-de-aceptación-del-proyecto)
 * [6. Stack de tecnologías](#6-stack-de-tecnologías)
 * [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)
-* [8. Funcionalidades opcionales](#8-funcionalidades-opcionales)
+
 
 ***
 
 ## 1. Preámbulo
 
-De acuerdo con
-[Wikipedia](https://es.wikipedia.org/wiki/Internet_de_las_cosas),
-la internet de las cosas (IoT, por sus siglas en inglés)​ es un concepto que
+La internet de las cosas (IoT, por sus siglas en inglés)​ 
 se refiere a una interconexión digital de objetos cotidianos con internet.
-Constituye un cambio radical en la calidad de vida de las personas en la
-sociedad, ofreciendo nuevas oportunidades en el acceso a
-datos, educación, seguridad, asistencia
-sanitaria y en el transporte, entre otros campos. Por ejemplo,
-en logística y manejo de flotas, se puede hacer seguimiento en
-todo momento de la ubicación y las condiciones de vehículos
-mediante sensores inalámbricos conectados a internet que envían alertas en
-caso de eventualidades (demoras, daños, robos, etc.).
+Esta conexión ha constituido un cambio importante en la vida de las personas
+y en la sociedad en general. La disponibilidad de la información ha permitido
+desarrollar procesos de sistematización y control útiles para la organizzación de
+la vida diaria en ámbitos como la salud, la educación y el transporte, entre otros.
+
+En el caso del transporte la internet de las cosas permite hacer seguimiento a
+cada uno de los vehículos en aspectos como la ubicación, condiciones, 
+daños y otras eventualidades.
 
 ![zach-vessels-utMdPdGDc8M-unsplash](https://firebasestorage.googleapis.com/v0/b/laboratoria-945ea.appspot.com/o/fleet-management-api-java%2Fthumb.jpg?alt=media)
 
-La IoT también plantea retos como el almacenamiento, análisis y
-visualización de la gran cantidad de información que genera.
+Además, de los beneficios la IoT también genera grandes retos
+relacionados con el almacenamiento, análisis y visualización de
+la información. 
 Se calcula que para el 2025 los dispositivos IoT generen
 [79.4 zettabytes](https://www.statista.com/statistics/1017863/worldwide-iot-connected-devices-data-size/)
 (1 zettabyte equivale a 1 trillón de gigabytes).
-Como desarrolladoras debemos estar al tanto de estos retos y contribuir para
-su solución desde nuestra experiencia, conocimiento y ganas de aprender.
+
 
 ## 2. Resumen del proyecto
 
-En este proyecto construirás la API REST de un
-[Fleet Management Software](https://en.wikipedia.org/wiki/Fleet_management)
+En este proyecto se construyó una API REST de un
+[Fleet Management Software]
 para consultar las ubicaciones de los vehículos de una empresa
 de taxis en Beijing, China.
 
-Te entregaremos las ubicaciones de casi 10 mil
-taxis. Esperamos que como desarrolladora explores nuevas alternativas y
-técnicas para almacenar y consultar esta
-información y puedas garantizar la mejor experiencia de usuaria en tu
-API REST.
-
 ## 3. Objetivos de aprendizaje
 
-
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
-
-### Java
-
-- [ ] **Modificadores de acesso (public, private, protected)**
-
-- [ ] **Variables**
-
-- [ ] **Uso de condicionales**
-
-- [ ] **Uso de bucles (Loops)**
-
-#### Tipos de data
-
-- [ ] **Primitivos**
-
-- [ ] **Datos primitivos vs no primitivos**
-
-- [ ] **Cadenas**
-
-- [ ] **Arreglos**
-
-#### Colecciones
-
-- [ ] **ArrayList**
-
-- [ ] **HashMap**
-
-- [ ] **HashSet**
-
-#### Testing
-
-- [ ] **JUnit**
-
-- [ ] **Mockito**
-
-#### Spring Framework
-
-- [ ] **Initializr**
-
-  <details><summary>Links</summary><p>
-
-  * [Spring Initializr](https://start.spring.io/)
-</p></details>
-
-- [ ] **Spring Boot**
-
-  <details><summary>Links</summary><p>
-
-  * [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
-</p></details>
-
-- [ ] **Controladores**
-
-- [ ] **Servicios**
-
-- [ ] **Spring Data JPA**
-
-  <details><summary>Links</summary><p>
-
-  * [Spring Data JPA - Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
-</p></details>
-
-- [ ] **Entidad**
-
-- [ ] **Repositorio**
-
-##### Conceptos Core _(Spring Framework)_
-
-- [ ] **Beans**
-
-- [ ] **Inversión de Control**
-
-- [ ] **Anotaciones**
-
-##### Spring Web _(Spring Framework)_
-
-- [ ] **RestController**
-
-- [ ] **RequestMapping**
-
-- [ ] **RequestParam**
-
-##### Testing _(Spring Framework)_
-
-- [ ] **Spring Test**
-
-- [ ] **Hamcrest**
-
-#### Hibernate ORM
-
-- [ ] **Configuración**
-
-- [ ] **Esquema**
-
-- [ ] **Entidad**
-
-- [ ] **Tabla**
-
-- [ ] **Columna**
-
-- [ ] **Identificadores**
-
-- [ ] **Asociaciones**
-
-- [ ] **Colecciones**
-
-- [ ] **Persistencia**
-
-- [ ] **Consultas**
+Los objetivos de aprendizaje alcanzados en el desarrollo de este proyecto fueron los siguientes:
 
 ### Python
 
-- [ ] **Variables (declaración, asignación, ámbito)**
+- [x] **Variables (declaración, asignación, ámbito)**
 
   <details><summary>Links</summary><p>
 
@@ -175,28 +57,28 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Variables in Python - GeeksforGeeks (en inglés)](https://www.geeksforgeeks.org/python-variables/)
 </p></details>
 
-- [ ] **Uso de condicionales (if, elif, ternario)**
+- [x] **Uso de condicionales (if, elif, ternario)**
 
   <details><summary>Links</summary><p>
 
   * [Conditional Statements in Python – Real Python (en inglés)](https://realpython.com/python-conditional-statements/)
 </p></details>
 
-- [ ] **Operadores (identidad, aritméticos, comparación etc)**
+- [x] **Operadores (identidad, aritméticos, comparación etc)**
 
   <details><summary>Links</summary><p>
 
   * [Python Operators - GeeksforGeeks (en inglés)](https://www.geeksforgeeks.org/python-operators/)
 </p></details>
 
-- [ ] **Docstrings (y su diferencia de comentarios)**
+- [x] **Docstrings (y su diferencia de comentarios)**
 
   <details><summary>Links</summary><p>
 
   * [Docstrings - Python Docs (en inglés)](https://docs.python.org/3/tutorial/controlflow.html#documentation-strings)
 </p></details>
 
-- [ ] **Linting (pylint)**
+- [x] **Linting (pylint)**
 
   <details><summary>Links</summary><p>
 
@@ -204,7 +86,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Linting Python in Visual Studio Code - Visual Studio Code Docs (en inglés)](https://code.visualstudio.com/docs/python/linting)
 </p></details>
 
-- [ ] **Serialización (y deserialización)**
+- [x] **Serialización (y deserialización)**
 
   <details><summary>Links</summary><p>
 
@@ -213,7 +95,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 #### Tipos de datos
 
-- [ ] **Tipos de datos primitivos (int, float, str, bool)**
+- [x] **Tipos de datos primitivos (int, float, str, bool)**
 
   <details><summary>Links</summary><p>
 
@@ -221,7 +103,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Data types in Python (en inglés)](https://www.educative.io/answers/data-types-in-python)
 </p></details>
 
-- [ ] **Listas (arrays)**
+- [x] **Listas (arrays)**
 
   <details><summary>Links</summary><p>
 
@@ -229,7 +111,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Lists and Tuples in Python - Real Python (en inglés)](https://realpython.com/python-lists-tuples/)
 </p></details>
 
-- [ ] **Tuples**
+- [x] **Tuples**
 
   <details><summary>Links</summary><p>
 
@@ -237,7 +119,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Lists and Tuples in Python - Real Python (en inglés)](https://realpython.com/python-lists-tuples/)
 </p></details>
 
-- [ ] **Dictionaries (Dicts)**
+- [x] **Dictionaries (Dicts)**
 
   <details><summary>Links</summary><p>
 
@@ -245,7 +127,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Dictionaries in Python - Real Python (en inglés)](https://realpython.com/python-dicts/)
 </p></details>
 
-- [ ] **Sets**
+- [x] **Sets**
 
   <details><summary>Links</summary><p>
 
@@ -255,28 +137,28 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 #### Funciones
 
-- [ ] **Conceptos basicos (params, args, default values, return)**
+- [x] **Conceptos basicos (params, args, default values, return)**
 
   <details><summary>Links</summary><p>
 
   * [Python Functions - GeeksforGeeks (en ingles)](https://www.geeksforgeeks.org/python-functions/)
 </p></details>
 
-- [ ] ***args y **kwargs**
+- [x] ***args y **kwargs**
 
   <details><summary>Links</summary><p>
 
   * [*args and **kwargs in Python - GeeksforGeeks (en inglés)](https://www.geeksforgeeks.org/args-kwargs-python/)
 </p></details>
 
-- [ ] **Cierres (closures)**
+- [x] **Cierres (closures)**
 
   <details><summary>Links</summary><p>
 
   * [Closures - Python Docs (en inglés)](https://docs.python.org/3/reference/datamodel.html#emulating-closures-and-nested-scope)
 </p></details>
 
-- [ ] **Funciones lambda**
+- [x] **Funciones lambda**
 
   <details><summary>Links</summary><p>
 
@@ -284,7 +166,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [How to Use Python Lambda Functions – Real Python (en inglés)](https://realpython.com/python-lambda/)
 </p></details>
 
-- [ ] **Decoradores**
+- [x] **Decoradores**
 
   <details><summary>Links</summary><p>
 
@@ -294,7 +176,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 #### Iteración
 
-- [ ] **Uso de bucles/ciclos (while, for..in)**
+- [x] **Uso de bucles/ciclos (while, for..in)**
 
   <details><summary>Links</summary><p>
 
@@ -302,7 +184,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Loops - Learn Python - Free Interactive Python Tutorial](https://www.learnpython.org/en/Loops)
 </p></details>
 
-- [ ] **Comprensión de listas**
+- [x] **Comprensión de listas**
 
   <details><summary>Links</summary><p>
 
@@ -311,7 +193,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [When to Use a List Comprehension in Python – Real Python (en inglés)](https://realpython.com/list-comprehension-python/)
 </p></details>
 
-- [ ] **Técnicas funcionales (map, filter, reduce)**
+- [x] **Técnicas funcionales (map, filter, reduce)**
 
   <details><summary>Links</summary><p>
 
@@ -321,7 +203,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 #### Testing en Python
 
-- [ ] **Pruebas unitarias (unit tests, unittest, pytest)**
+- [x] **Pruebas unitarias (unit tests, unittest, pytest)**
 
   <details><summary>Links</summary><p>
 
@@ -329,7 +211,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [pytest - Documentación oficial](https://docs.pytest.org/en/6.2.x/)
 </p></details>
 
-- [ ] **Uso de mocks (y patch)**
+- [x] **Uso de mocks (y patch)**
 
   <details><summary>Links</summary><p>
 
@@ -337,7 +219,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Python Mock Library - Real Python (en inglés)](https://realpython.com/python-mock-library/)
 </p></details>
 
-- [ ] **Uso de fixtures**
+- [x] **Uso de fixtures**
 
   <details><summary>Links</summary><p>
 
@@ -346,14 +228,14 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 #### Modularización
 
-- [ ] **Módulos**
+- [x] **Módulos**
 
   <details><summary>Links</summary><p>
 
   * [Módulos - Python Docs (en inglés)](https://docs.python.org/3/tutorial/modules.html)
 </p></details>
 
-- [ ] **Paquetes**
+- [x] **Paquetes**
 
   <details><summary>Links</summary><p>
 
@@ -362,14 +244,14 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 #### Manejo de dependencias
 
-- [ ] **pip (instalación y uso de paquetes)**
+- [x] **pip (instalación y uso de paquetes)**
 
   <details><summary>Links</summary><p>
 
   * [pip - Python Docs (en inglés)](https://docs.python.org/3/installing/index.html)
 </p></details>
 
-- [ ] **Virtual Environment (ambientes virtuales, virtualenv)**
+- [x] **Virtual Environment (ambientes virtuales, virtualenv)**
 
   <details><summary>Links</summary><p>
 
@@ -377,7 +259,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Python Virtual Environments: A Primer – Real Python (en inglés)](https://realpython.com/python-virtual-environments-a-primer/)
 </p></details>
 
-- [ ] **requirements.txt**
+- [x] **requirements.txt**
 
   <details><summary>Links</summary><p>
 
@@ -388,21 +270,21 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ##### Rutas _(Flask)_
 
-- [ ] **Decorador de ruta**
+- [x] **Decorador de ruta**
 
   <details><summary>Links</summary><p>
 
   * [Routing - Flask Docs (en inglés)](https://flask.palletsprojects.com/en/3.0.x/quickstart/#routing)
 </p></details>
 
-- [ ] **Función de vista**
+- [x] **Función de vista**
 
   <details><summary>Links</summary><p>
 
   * [View Functions - Flask Docs (en inglés)](https://flask.palletsprojects.com/en/3.0.x/quickstart/#view-functions)
 </p></details>
 
-- [ ] **Reglas de variables (urls dinamica)**
+- [x] **Reglas de variables (urls dinamica)**
 
   <details><summary>Links</summary><p>
 
@@ -411,14 +293,14 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ##### Request Object _(Flask)_
 
-- [ ] **Argumentos**
+- [x] **Argumentos**
 
   <details><summary>Links</summary><p>
 
   * [Request - Flask Docs (en inglés)](https://flask.palletsprojects.com/en/3.0.x/quickstart/#accessing-request-data)
 </p></details>
 
-- [ ] **Headers (cabeceras)**
+- [x] **Headers (cabeceras)**
 
   <details><summary>Links</summary><p>
 
@@ -427,14 +309,14 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ##### Response Object _(Flask)_
 
-- [ ] **Partes de la respuesta (status, body, headers)**
+- [x] **Partes de la respuesta (status, body, headers)**
 
   <details><summary>Links</summary><p>
 
   * [Response - Flask Docs (en inglés)](https://flask.palletsprojects.com/en/3.0.x/quickstart/#about-responses)
 </p></details>
 
-- [ ] **jsonify**
+- [x] **jsonify**
 
   <details><summary>Links</summary><p>
 
@@ -443,65 +325,20 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ##### Testing en Flask _(Flask)_
 
-- [ ] **Configuración de fixtures**
+- [x] **Configuración de fixtures**
 
   <details><summary>Links</summary><p>
 
   * [Testing - Flask Docs (en inglés)](https://flask.palletsprojects.com/en/3.0.x/testing/#fixtures)
 </p></details>
 
-- [ ] **Test Client**
+- [x] **Test Client**
 
   <details><summary>Links</summary><p>
 
   * [Testing - Flask Docs (en inglés)](https://flask.palletsprojects.com/en/3.0.x/testing/#sending-requests-with-the-test-client)
 </p></details>
 
-#### Django
-
-- [ ] **Views**
-
-  <details><summary>Links</summary><p>
-
-  * [Base views](https://docs.djangoproject.com/en/5.0/ref/class-based-views/base/)
-</p></details>
-
-- [ ] **Testing**
-
-  <details><summary>Links</summary><p>
-
-  * [Testing in Django](https://docs.djangoproject.com/en/5.0/topics/testing/)
-  * [Testing rest framework](https://www.django-rest-framework.org/api-guide/testing/#testing)
-</p></details>
-
-- [ ] **queryset**
-
-  <details><summary>Links</summary><p>
-
-  * [The queryset argument](https://www.django-rest-framework.org/api-guide/relations/#the-queryset-argument)
-</p></details>
-
-- [ ] **Filter**
-
-  <details><summary>Links</summary><p>
-
-  * [Filtering](https://www.django-rest-framework.org/api-guide/filtering/)
-</p></details>
-
-- [ ] **Order By**
-
-  <details><summary>Links</summary><p>
-
-  * [OrderingFilter](https://www.django-rest-framework.org/api-guide/filtering/#orderingfilter)
-</p></details>
-
-- [ ] **URLs (Path, URLconf, urlpatterns)**
-
-  <details><summary>Links</summary><p>
-
-  * [Django URLs](https://tutorial.djangogirls.org/en/django_urls/)
-  * [URL dispatcher](https://docs.djangoproject.com/en/5.0/topics/http/urls/)
-</p></details>
 
 ##### Configuración _(Django)_
 
@@ -528,7 +365,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Field types](https://docs.djangoproject.com/en/5.0/topics/db/models/#Fields)
 </p></details>
 
-- [ ] **Foreign Key**
+- [x] **Foreign Key**
 
   <details><summary>Links</summary><p>
 
@@ -537,21 +374,21 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ##### Rest Framework _(Django)_
 
-- [ ] **Serializers**
+- [x] **Serializers**
 
   <details><summary>Links</summary><p>
 
   * [Serializers](https://www.django-rest-framework.org/community/third-party-packages/#serializers)
 </p></details>
 
-- [ ] **Pagination**
+- [x] **Pagination**
 
   <details><summary>Links</summary><p>
 
   * [Pagination](https://www.django-rest-framework.org/api-guide/pagination/#pagination)
 </p></details>
 
-- [ ] **Query params**
+- [x] **Query params**
 
   <details><summary>Links</summary><p>
 
@@ -574,69 +411,18 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### Programación Orientada a Objetos (OOP)
 
-- [ ] **Clases**
+- [x] **Clases**
 
-- [ ] **Objetos**
+- [x] **Objetos**
 
-- [ ] **Métodos**
+- [x] **Métodos**
 
-- [ ] **Atributos**
+- [x] **Constructores**
 
-- [ ] **Constructores**
-
-- [ ] **Encapsulamiento**
-
-- [ ] **Abstracción**
-
-- [ ] **Composición**
-
-- [ ] **Interfaces**
-
-- [ ] **Herencia (super, extends, override)**
-
-- [ ] **Lenguaje de Modelado Unificado (UML, class diagrams)**
-
-### Node.js
-
-- [ ] **Instalar y usar módulos con npm**
-
-  <details><summary>Links</summary><p>
-
-  * [Sitio oficial de npm (en inglés)](https://www.npmjs.com/)
-</p></details>
-
-- [ ] **Configuración de package.json**
-
-  <details><summary>Links</summary><p>
-
-  * [package.json - Documentación oficial (en inglés)](https://docs.npmjs.com/files/package.json)
-</p></details>
-
-- [ ] **Configuración de npm-scripts**
-
-  <details><summary>Links</summary><p>
-
-  * [scripts - Documentación oficial (en inglés)](https://docs.npmjs.com/misc/scripts)
-</p></details>
-
-- [ ] **process (env, argv, stdin-stdout-stderr, exit-code)**
-
-  <details><summary>Links</summary><p>
-
-  * [Process - Documentación oficial (en inglés)](https://nodejs.org/api/process.html)
-</p></details>
-
-- [ ] **File system (fs, path)**
-
-  <details><summary>Links</summary><p>
-
-  * [File system - Documentación oficial (en inglés)](https://nodejs.org/api/fs.html)
-  * [Path - Documentación oficial (en inglés)](https://nodejs.org/api/path.html)
-</p></details>
 
 ### SQL
 
-- [ ] **Creación y modificación de tablas**
+- [x] **Creación y modificación de tablas**
 
   <details><summary>Links</summary><p>
 
@@ -645,7 +431,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [ALTER TABLE Statement - PostgreSQL Docs (en inglés)](https://www.postgresql.org/docs/9.1/sql-altertable.html)
 </p></details>
 
-- [ ] **Operaciones CRUD (Create-Read-Update-Delete)**
+- [x] **Operaciones CRUD (Create-Read-Update-Delete)**
 
   <details><summary>Links</summary><p>
 
@@ -665,9 +451,9 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### Bases de datos
 
-- [ ] **Modelado de datos**
+- [x] **Modelado de datos**
 
-- [ ] **Conexión**
+- [x] **Conexión**
 
 - [ ] **Índices y limitaciones**
 
@@ -689,10 +475,10 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ## 4. Consideraciones generales
 
-* Este proyecto se debe "resolver" en duplas.
-* El rango de tiempo estimado para completar el proyecto es de 4 a 6 Sprints.
+* Este proyecto se desarrollo en 5 sprints por la desarrolladora Elizabeth Patiño. 
 
-## 5. Criterios de aceptación del proyecto
+
+## 5. Criterios de cumplimiento del proyecto
 
 Nuestra cliente ha instalado dispositivos GPS en sus taxis.
 Estos dispositivos utilizan señales satelitales para determinar
@@ -747,10 +533,10 @@ listar todos los taxis.
 ##### Criterios de aceptación
 
 * El _endpoint_ responde para cada taxi: id y placa.
-* El _endpoint_ paginamos los resultados para asegurar que las
+* El _endpoint_ tiene paginación de los resultados para asegurar que las
 respuestas sean más fáciles de manejar.
 
-##### Definición de terminado
+##### Contenido
 
 * Se cuenta con una documentación en [Swagger](https://swagger.io/)
 para el _endpoint_ desarrollado especificando
@@ -760,10 +546,10 @@ url, parámetros,
 [códigos HTTP de respuesta](https://shorturl.at/bdegB)
 y
 [cuerpo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages).
-* El código del _endpoint_ debe recibir _code review_ de al
+* El código del _endpoint_ recibió _code review_ de al
 menos una compañera.
-* El código _endpoint_ debe estar cargado en un repositorio de Github.
-* El código _endpoint_ debe contar con test unitarios y e2e.
+* El código _endpoint_ está cargado en un repositorio de Github.
+* El código _endpoint_ tiene con test unitarios y e2e.
 
 ***
 
@@ -776,7 +562,7 @@ consultar todas las ubicaciones de un taxi dado el id y una fecha.
 
 * El _endpoint_ responde con el id del taxi y una fecha mostrando
   la siguiente información: latitud, longitud y timestamp (fecha y hora).
-* El _endpoint_ paginamos los resultados para asegurar que las
+* El _endpoint_ tiene paginados los resultados para asegurar que las
   respuestas sean más fáciles de manejar.
 
 ##### Definición de terminado
@@ -791,8 +577,8 @@ y
 [cuerpo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages).
 * El código del _endpoint_ debe recibir _code review_ de al
 menos una compañera.
-* El código _endpoint_ debe estar cargado en un repositorio de Github.
-* El código _endpoint_ debe contar con test unitarios y e2e.
+* El código _endpoint_ está cargado en un repositorio de Github.
+* El código _endpoint_ cuenta con test unitarios y e2e.
 
 ***
 
@@ -805,7 +591,7 @@ consultar la última ubicación reportada por cada taxi.
 
 * El _endpoint_ responde para cada taxi la siguiente información:
 id, placa, latitud, longitud y timestamp (fecha y hora).
-* El _endpoint_ paginamos los resultados para asegurar que las
+* El _endpoint_ tiene paginados los resultados para asegurar que las
 respuestas sean más fáciles de manejar.
 
 ##### Definición de terminado
@@ -820,42 +606,27 @@ y
 [cuerpo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages).
 * El código del _endpoint_ debe recibir _code review_ de al
 menos una compañera.
-* El código _endpoint_ debe estar cargado en un repositorio de Github.
-* El código _endpoint_ debe contar con test unitarios y e2e.
+* El código _endpoint_ está cargado en un repositorio de Github.
+* El código _endpoint_ cuenta con test unitarios y e2e.
 
 ***
 
 ## 6. Stack de tecnologías
 
-Puedes implementar este proyecto en JavaScript, Python o Java.
-
-* [NodeJs](./docs/stack-node.md)
-* [Java](./docs/stack-java.md)
 * [Python](./docs/stack-python.md)
 
 ## 7. Pistas, tips y lecturas complementarias
 
 ### Modelamiento de datos
 
-La base de datos recomendada para tu aplicación es PostgreSQL. Te
-recomendamos usar [vercel Postgresql](https://vercel.com/docs/storage/vercel-postgres)
-para que no tengas que instalar PostgreSQL en tu computadora.
-
-Una vez tengas acceso a una instancia de PostgreSQL, deberás crear tablas en
-tu base de datos para almacenar la información entregada. Te recomendamos
-entonces crear dos tablas, una para almacenar la información de taxis y otra
-para almacenar la información de ubicaciones. Deberás definir las columnas
-de cada tabla de acuerdo a la información entregada.
-
-Puedes crear una tabla en PostgreSQL usando
-[SQL](https://www.postgresqltutorial.com/postgresql-create-table/).
+Se uso PostgreSQL y  [vercel Postgresql](https://vercel.com/docs/storage/vercel-postgres).
 
 ### Definir endpoints de API
 
-Deberás definir y documentar los endpoints de tu API.
+Se definieron y documentaron los endpoints de tu API.
 Debes usar [Swagger](https://swagger.io/) para esto.
 
-Para una API REST debes definir para cada endpoint entre otras cosas el
+Para una API REST en cada endpoint se establecieron entre otras cosas el
 [método HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods),
 url, parámetros,
 [encabezados](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers),
@@ -863,15 +634,4 @@ url, parámetros,
 y
 [cuerpo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages).
 
-Por ejemplo, en la siguiente figura se define un endpoint para consultar la
-información de los taxis en la aplicación. El método del endpoint es _GET_,
-la url es _/taxis_. Recibe un parámetro _query_, retorna la información con
-_código HTTP_ 200 en formato json gracias al _header_
-`Content-type` con valor `application/json`.
 
-![Ejemplo Endpoint API Rest](https://firebasestorage.googleapis.com/v0/b/laboratoria-945ea.appspot.com/o/fleet-management-api-java%2Fexample-endpoint-api-rest.png?alt=media)
-
-## 8. Funcionalidades opcionales
-
-Si completaste todas las funcionalidades del proyecto te invitamos a trabajar en
-las [funcionalides opcionales](./docs/extension.md)

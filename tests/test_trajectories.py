@@ -1,4 +1,4 @@
-"""test routes of trajectoriesd"""
+"""test routes of trajectories"""
 def test_response(client):
     """check the response"""
     response = client.get('/trajectories?taxi_id=6418&date=2008-02-02')

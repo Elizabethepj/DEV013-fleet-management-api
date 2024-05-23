@@ -1,5 +1,6 @@
-import pytest
+"""test endopoint taxis"""
 import json
+import pytest
 
 
 @pytest.mark.parametrize("expected_status", [200])

@@ -24,7 +24,7 @@ def test_show_trajectories_e2e():
     """test e2e show trajectories"""
     response = requests.get(
         'http://localhost:5000/trajectories?taxi_id=7957&date=2008-02-02',
-         timeout=5)
+        timeout=5)
     assert response.status_code == 200
 
     trajectories_data = response.json()
@@ -37,6 +37,24 @@ def test_show_trajectories_e2e():
         assert 'longitude' in trajectory
         assert 'taxi_id' in trajectory
         assert 'time' in trajectory
+
+
+def test_show_lasttrajectory_e2e():
+    """test e2e last trajectory"""
+    response = requests.get(
+        'http://localhost:5000/last_trajectory',
+        timeout=5)
+    assert response.status_code == 200
+
+    locations_data = response.json()
+    assert isinstance(locations_data, list)
+    for location in locations_data:
+        assert isinstance(location, dict)
+        assert 'taxi_id' in location
+        assert 'latitude' in location
+        assert 'longitude' in location
+        assert 'date' in location
+        assert 'plate' in location
 
 
 # Ejecutar test E2E
